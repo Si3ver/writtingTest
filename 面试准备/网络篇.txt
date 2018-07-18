@@ -1,0 +1,20 @@
+# 网络篇
+
+## HTTP
+
++ HTTP状态码
+
++ etag
+
++ HTTP1.0 1.1 2.0 
+
++ HTTPS，在哪一层加密
+
+
+## TCP/IP 
+
++ TCP三次握手、四次挥手、time_wait状态
+
+
+DNS
+
