@@ -42,15 +42,15 @@
 1. concat、slice
 2. push、pop、shift、unshift、splice、sort
 
-### 1.2 原型、原型链、作用域、闭包
+### 1.2 原型、原型链
 
-- 构造函数
++ 构造函数
 1. var a = {} 是 var a = new Object() 的语法糖
 2. var a = [] 是 var a = new Array() 的语法糖
 3. function Foo(){...} 是 var Foo = new Function(...) 的语法糖
 4. 用instanceof判断一个函数是否是一个变量的构造函数
 
-- 原型规则
++ 原型规则
 1. 除null外，其他所有的引用类型（Array, Object, Function）都具有对象特性，能自由扩展属性。
 2. 除null外，其他所有引用类型（Array, Object, Function）都具有`__proto__`（隐式原型）属性，属性值是一个普通对象。
 3. 所有 Function ，都具有`prototype`（显式原型）属性，属性值是一个普通对象。
@@ -61,12 +61,28 @@
 + 原型链、闭包，为什么要用闭包，内存回收机制
 + call、apply
 
-补充：
-+ 属性遍历
++ 补充：属性遍历
 1. for item in f           旧版浏览器会拿到原型上的属性，新版不会
 2. f.hasOwnProperty(item)  不会拿到原型上的属性
 
-### 1.3 异步、单线程
+### 1.3 作用域、闭包
+
++ 变量提升
++ this使用场景
+1. 作为构造函数执行
+2. 作为对象属性执行
+3. 作为普通函数执行
+4. call apply bind, 注意，`var fn2 = function(){}.bind({x:100})`,需要是函数表达式。
++ 10个`<a>`标签，点击时弹出相应的序号
++ 如何理解作用域
+  -JS中只有全局和函数级作用域，没有块级作用域（es6新增了）
+  -全局变量不安全，因为任何函数都可以改，容易被污染。推荐用函数级作用域
+
++ 实际开发中，闭包的应用
+
++ 概念：EC、this、作用域、作用域链、闭包
+
+### 1.4 异步、单线程
 
 ## 二、JS API
 
